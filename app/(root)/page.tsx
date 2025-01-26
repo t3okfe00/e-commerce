@@ -3,6 +3,8 @@ import { getLatestProducts } from "@/lib/actions/product.actions";
 import { LATEST_PRODUCTS_LIMIT } from "@/lib/constants";
 const HomePage = async () => {
   const latestProducts = await getLatestProducts();
+  console.log("Products", latestProducts);
+
   return (
     <>
       <ProductList
